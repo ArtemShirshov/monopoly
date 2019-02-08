@@ -1,0 +1,22 @@
+:local {
+    .wrap {
+        padding-bottom: 15px;
+    }
+
+    .wrapPlayers {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .playerItem {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .playerName {
+        font-weight: 700;
+    }
+}

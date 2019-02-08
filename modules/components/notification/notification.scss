@@ -1,0 +1,18 @@
+:local {
+    .wrap {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+        background: rgba(0,0,0,.9);
+        padding: 15px;
+        transition: bottom ease-in-out 200ms;
+
+        &.show {
+            bottom: -50px;
+        }
+    }
+
+    .text {
+        color: white;
+    }
+}

@@ -1,0 +1,43 @@
+@import "normalize";
+@import "variables";
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-size: 16px;
+    font-family: "Arial", sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none outside none;
+    padding-left: 0;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+#react-root {
+    height: 100%;
+    & > [data-reactroot] {
+        height: 100%;
+    }
+}
+
+.text-hidden {
+    text-indent: -9999px;
+    overflow: hidden;
+}

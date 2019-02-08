@@ -1,0 +1,42 @@
+@import "mixins";
+
+/**
+ * COLORS
+ *
+ * How to get color name:
+ * use this service http://chir.ag/projects/name-that-color/
+ *
+ * How to create variable:
+ * --color-[your color name] like these: --color-white, --color-black etc...
+ */
+:root {
+    /* Fonts family */
+    --font-family-default: 'Open Sans', sans-serif;
+    --font-family-title: 'Libre Baskerville', serif;
+
+    /* Font weights */
+    --font-weight-light: 300;
+    --font-weight-thin: 400;
+    --font-weight-normal: 500;
+    --font-weight-bold: 700;
+
+    /* Common colors */
+    --color-white: #fff;
+    --color-black: #000;
+
+    /* Primary colors */
+    --color-smoky: #5c5877;
+    --color-port-gore: #251c51;
+    --color-eastern-blue: #1fa899;
+    --color-wild-sand: #f5f5f5;
+    --color-alabaster: #fafafa;
+    --color-ebb: #f3f1f0;
+    --color-mercury: #e5e5e5;
+    --color-quill-gray: #e6e6e4;
+    --color-silver: #c6c6c6;
+    --color-tide: #b8b7af;
+    --color-santas-gray: #a5a2b8;
+    --color-friar-gray: #838382;
+    --color-fuscous-gray: #565551;
+    --color-red-ribbon: #f31b43;
+}

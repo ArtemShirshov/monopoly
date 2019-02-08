@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PagesRouter /> should render pagesRouter page  1`] = `
+Array [
+  <Router>
+    <HomeConnected
+      page="home"
+      path="/"
+    />
+    <DynamicPageConnected
+      default={true}
+    />
+  </Router>,
+  "Match",
+]
+`;

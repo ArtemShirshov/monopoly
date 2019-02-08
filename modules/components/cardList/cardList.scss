@@ -1,0 +1,53 @@
+:local {
+    .wrap {
+        padding: 15px;
+    }
+
+    .wrapCards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .cardItem {
+        width: 50%;
+        padding: 10px;
+        box-sizing: border-box;
+    }
+
+    .cardWrap {
+        background: #251c51;
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .cardHeader {
+        padding: 5px 0;
+        border-radius: 5px 5px 0 0;
+
+        &.purple {
+            background: rebeccapurple;
+        }
+
+        &.red {
+            background: red;
+        }
+    }
+
+    .cardBody {
+        padding: 10px 0;
+        background: green;
+        border-radius: 0 0 5px 5px;
+
+        div {
+            margin-bottom: 5px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

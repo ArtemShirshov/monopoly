@@ -1,0 +1,19 @@
+[ignore]
+.*/node_modules/stylelint/*
+.*/node_modules/nock/*
+.*/node_modules/immutable/*
+.*/node_modules/react-motion/*
+*.test.js
+
+[include]
+.*/modules/*
+
+[libs]
+.*/node_modules/*
+*/flow-typed/*
+
+[options]
+module.name_mapper='.*\(.scss\)' -> 'empty/object'
+module.name_mapper='^\(\/?.*\)$' -> '<PROJECT_ROOT>/modules/\1'
+
+suppress_comment= \\(.\\|\n\\)*\\$FlowFixMe

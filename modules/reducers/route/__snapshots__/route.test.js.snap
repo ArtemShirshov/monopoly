@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Action creators for "route" reducer action "getRoute" 1`] = `
+Object {
+  "payload": Object {
+    "request": Object {
+      "baseURL": "https://api.gusadev.com/develop/",
+      "method": "GET",
+      "url": "route/14/test",
+    },
+  },
+  "type": "GET_ROUTE",
+}
+`;
+
+exports[`Action creators for "route" reducer action "setPage" 1`] = `
+Object {
+  "payload": Object {
+    "page": "category",
+    "params": Object {
+      "id": 1000,
+    },
+  },
+  "type": "SET_PAGE",
+}
+`;
+
+exports[`route reducer should handle "setPage" action 1`] = `
+Object {
+  "page": "category",
+  "params": Object {
+    "id": 1000,
+  },
+}
+`;
+
+exports[`route reducer should return the initial state 1`] = `
+Object {
+  "page": "",
+  "params": Object {},
+}
+`;

@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Home/> renders correctly 1`] = `
+Array [
+  <HeaderConnected />,
+  <TopBanner />,
+  <BrandsStrip />,
+  <YouCovered />,
+  <Lenses />,
+  <Mirror />,
+  <Offers />,
+  <BrandsGallery />,
+  <GetPlans />,
+  <Footer />,
+  <Popup
+    showClose={true}
+    visible={true}
+  >
+    testContent
+  </Popup>,
+]
+`;
+
+exports[`<Home/> renders correctly with html content for popup 1`] = `
+Array [
+  <HeaderConnected />,
+  <TopBanner />,
+  <BrandsStrip />,
+  <YouCovered />,
+  <Lenses />,
+  <Mirror />,
+  <Offers />,
+  <BrandsGallery />,
+  <GetPlans />,
+  <Footer />,
+  <Popup
+    showClose={true}
+    visible={true}
+  >
+    <div
+      dangerouslySetInnerHTML={
+        Object {
+          "__html": "<p>some html content</p>",
+        }
+      }
+    />
+  </Popup>,
+]
+`;
