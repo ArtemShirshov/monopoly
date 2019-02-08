@@ -8,7 +8,6 @@ jest.mock('@reach/router', () => ({
     Match: () => 'Match',
 }));
 
-jest.mock('libs/sentryCaptureException');
 jest.mock('containers/dynamicPage/dynamicPage', () => ({
     DynamicPageConnected: 'DynamicPageConnected',
 }));

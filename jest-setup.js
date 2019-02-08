@@ -9,13 +9,6 @@ const mockMatchMedia = () => ({
 
 window.matchMedia = window.matchMedia || mockMatchMedia;
 
-const mockVariantsSwitcher = () => ({
-    VariantSwitch: 'VariantSwitch',
-    Variant: 'Variant',
-});
-
-// Mock with-optimize variants switcher
-jest.doMock('with-optimize', mockVariantsSwitcher);
 jest.mock('axios');
 
 global.requestAnimationFrame = cb => setTimeout(cb, 0);

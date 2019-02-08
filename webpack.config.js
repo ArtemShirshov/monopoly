@@ -67,8 +67,7 @@ module.exports = {
             'jsonp',
             'rc-dialog',
             'rc-tooltip',
-            'with-optimize',
-            'redux-saga',
+            'redux-saga'
         ],
     },
     output: {

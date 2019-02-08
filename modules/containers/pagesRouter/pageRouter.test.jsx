@@ -3,8 +3,6 @@ import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {connect} from 'react-redux';
 
-import {sentryCaptureException} from 'libs/sentryCaptureException';
-
 import {PagesRouter, mapDispatchToProps} from './pagesRouter';
 
 configure({adapter: new Adapter()});
@@ -14,7 +12,6 @@ jest.mock('@reach/router', () => ({
     Router: 'Router',
     Match: 'Match',
 }));
-jest.mock('libs/sentryCaptureException');
 jest.mock('containers/dynamicPage/dynamicPage', () => ({
     DynamicPageConnected: 'DynamicPageConnected',
 }));
@@ -38,7 +35,6 @@ beforeEach(() => {
 
     wrapper = shallow(<PagesRouter {...props} />);
     props.setPage.mockClear();
-    sentryCaptureException.mockClear();
 });
 
 describe('<PagesRouter /> component', () => {
@@ -46,14 +42,12 @@ describe('<PagesRouter /> component', () => {
         expect(connect).toHaveBeenCalledWith(null, mapDispatchToProps);
     });
 
-    test('componentDidCatch method should call "sentryCaptureException" function', () => {
+    test('componentDidCatch method should set state hasError', () => {
         expect(wrapper.state().hasError).toBe(false);
-        expect(sentryCaptureException).not.toBeCalled();
 
         wrapper.instance().componentDidCatch({error: 'test'}, {errorInfo: 'test2'});
 
         expect(wrapper.state().hasError).toBe(true);
-        expect(sentryCaptureException).toBeCalledWith({error: 'test'}, {errorInfo: 'test2'});
     });
 
     test('setPage method should call "setPage" action', () => {
