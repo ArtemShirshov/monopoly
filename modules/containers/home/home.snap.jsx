@@ -4,16 +4,22 @@ import renderer from 'react-test-renderer';
 import {Home} from './home';
 
 jest.mock('components/__helpers/popup/popup', () => ({Popup: 'Popup'}));
-jest.mock('components/__helpers/header/header', () => ({HeaderConnected: 'HeaderConnected'}));
+jest.mock('components/__helpers/header/header', () => ({
+    HeaderConnected: 'HeaderConnected',
+}));
 jest.mock('components/__helpers/footer/footer', () => ({Footer: 'Footer'}));
 jest.mock('components/home/topBanner/topBanner', () => ({TopBanner: 'TopBanner'}));
-jest.mock('components/home/brandsStrip/brandsStrip', () => ({BrandsStrip: 'BrandsStrip'}));
+jest.mock('components/home/brandsStrip/brandsStrip', () => ({
+    BrandsStrip: 'BrandsStrip',
+}));
 jest.mock('components/home/youCovered/youCovered', () => ({YouCovered: 'YouCovered'}));
 jest.mock('components/home/lenses/lenses', () => ({Lenses: 'Lenses'}));
 jest.mock('components/home/mirror/mirror', () => ({Mirror: 'Mirror'}));
 jest.mock('components/home/offers/offers', () => ({Offers: 'Offers'}));
 jest.mock('components/home/getPlans/getPlans', () => ({GetPlans: 'GetPlans'}));
-jest.mock('components/home/brandsGallery/brandsGallery', () => ({BrandsGallery: 'BrandsGallery'}));
+jest.mock('components/home/brandsGallery/brandsGallery', () => ({
+    BrandsGallery: 'BrandsGallery',
+}));
 
 const props = {
     cmsPopup: {

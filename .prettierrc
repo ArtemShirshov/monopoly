@@ -3,6 +3,6 @@
   "parser": "flow",
   "tabWidth": 4,
   "bracketSpacing": false,
-  "printWidth": 90,
+  "printWidth": 100,
   "trailingComma": "all"
 }

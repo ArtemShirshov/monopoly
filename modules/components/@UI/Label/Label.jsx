@@ -9,7 +9,5 @@ import s from './Label.scss';
  * @returns {Node} - rendered Brands gallery component
  */
 export const Label = ({children, type}): Node => (
-    <div className={classNames(s.label, s[type])}>
-        {children}
-    </div>
+    <div className={classNames(s.label, s[type])}>{children}</div>
 );

@@ -1,6 +1,6 @@
 // @flow
 import type {SagaIterator} from 'redux-saga';
-import {put, select, takeEvery, call} from 'redux-saga/effects';
+import {put, select, takeEvery} from 'redux-saga/effects';
 
 import {startCreateUserSaga, addUser} from 'reducers/players';
 import {getPlayers} from 'selectors/players/players';
@@ -25,7 +25,7 @@ const defaultFieldsUser = {
  */
 export function* createUser({payload}: ActionCreatorType<number>): SagaIterator {
     const players = yield select(getPlayers);
-    console.log(payload);
+
     yield put(addUser({...defaultFieldsUser, id: players.length, name: payload}));
 }
 

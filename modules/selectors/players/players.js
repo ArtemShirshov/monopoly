@@ -1,6 +1,4 @@
 // @flow
-import {createSelector} from 'reselect';
-
 import type {ApplicationStoreType} from 'constants/flow/flowTypes';
 
 /**

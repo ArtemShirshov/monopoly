@@ -16,7 +16,7 @@ export const {
     SET_PURCHASE_SHARES: (player: PageType): PageType => player,
     START_PURCHASE_SHARES_SAGA: purchase => purchase,
     START_CREATE_USER_SAGA: (userName: string): string => userName,
-    ADD_USER: (player) => player
+    ADD_USER: player => player,
 });
 
 /**
@@ -36,10 +36,10 @@ export const players = handleActions(
             state: PageType,
             {payload}: ActionType<typeof setPurchaseShares>,
         ): PageType => payload,
-        [addUser]: (
-            state: PageType,
-            {payload}: ActionType<typeof setPurchaseShares>,
-        ): PageType => ([...state, payload]),
+        [addUser]: (state: PageType, {payload}: ActionType<typeof setPurchaseShares>): PageType => [
+            ...state,
+            payload,
+        ],
     },
     defaultState,
 );

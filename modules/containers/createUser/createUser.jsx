@@ -52,7 +52,9 @@ export class CreateUser extends PureComponent<PropsType> {
             <Fragment>
                 <h1>Создание игрока</h1>
                 <input type="text" onChange={this.handlerChange} value={name} />
-                <Button onClick={this.createUser} disable={error}>Создать</Button>
+                <Button onClick={this.createUser} disable={error}>
+                    Создать
+                </Button>
                 {label !== '' && (
                     <Fragment>
                         <Label type="success">{label}</Label>
@@ -64,15 +66,11 @@ export class CreateUser extends PureComponent<PropsType> {
     }
 }
 
-export const mapStateToProps = (store: ApplicationStoreType) => ({
-    // cmsPopup: store.cmsPopup,
-});
-
 export const mapDispatchToProps = {
     startCreateUserSaga,
 };
 
 export const CreateUserConnected = connect(
-    mapStateToProps,
+    null,
     mapDispatchToProps,
 )(CreateUser);
