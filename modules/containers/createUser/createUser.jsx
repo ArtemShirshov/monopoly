@@ -11,7 +11,7 @@ import {startCreateUserSaga} from 'reducers/players';
 type PropsType = {};
 
 /**
- * Main container for home page
+ * Main container for create users and users list
  * @return {Node} - Element
  */
 export class CreateUser extends PureComponent<PropsType> {
