@@ -4,7 +4,6 @@ import {connect} from 'react-redux';
 import {Link} from '@reach/router';
 
 import type {ApplicationStoreType} from 'constants/flow/flowTypes';
-
 import {Button, Label} from 'components/@UI';
 import {startCreateUserSaga} from 'reducers/players';
 

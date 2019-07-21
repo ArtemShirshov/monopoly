@@ -5,9 +5,8 @@ import Select from 'react-select';
 
 import {setShares} from 'reducers/shares';
 import {startPurchaseSharesSaga} from 'reducers/players';
-import {Title} from 'components/title/title';
-
-// import type {VoidFunctionType, ApplicationStoreType} from 'constants/flow/flowTypes';
+import {Title} from 'components/@UI';
+import type {ApplicationStoreType} from 'constants/flow/flowTypes';
 
 import s from './shares.scss';
 

@@ -1,7 +1,7 @@
 // @flow
 import React, {type Node} from 'react';
 
-import s from './title.scss';
+import s from './Title.scss';
 
 /**
  * Brands gallery component

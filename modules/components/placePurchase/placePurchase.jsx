@@ -5,9 +5,8 @@ import Select from 'react-select';
 
 import {startPurchaseSaga} from 'reducers/cards';
 import {getFreeCards} from 'selectors/cards/cards';
-import {Title} from 'components/title/title';
-
-// import type {VoidFunctionType, ApplicationStoreType} from 'constants/flow/flowTypes';
+import {Title} from 'components/@UI';
+import type {ApplicationStoreType} from 'constants/flow/flowTypes';
 
 import s from './placePurchase.scss';
 

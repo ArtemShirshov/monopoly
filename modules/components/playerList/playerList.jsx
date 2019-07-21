@@ -1,11 +1,10 @@
 // @flow
-import React, {PureComponent, type Node, Fragment} from 'react';
+import React, {PureComponent, type Node} from 'react';
 import {connect} from 'react-redux';
 
+import type {ApplicationStoreType} from 'constants/flow/flowTypes';
 import {circularTax, circularIncome} from 'components/playerList/utils/calculatorOperation';
-import {Title} from 'components/title/title';
-
-// import type {VoidFunctionType, ApplicationStoreType} from 'constants/flow/flowTypes';
+import {Title} from 'components/@UI';
 
 import s from './playerList.scss';
 

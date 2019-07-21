@@ -3,7 +3,7 @@ import React, {PureComponent, type Node} from 'react';
 import {connect} from 'react-redux';
 import classNames from 'classnames';
 
-import {Title} from 'components/title/title';
+import {Title} from 'components/@UI';
 
 import s from './cardList.scss';
 
