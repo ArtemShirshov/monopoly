@@ -20,7 +20,7 @@ const defaultFieldsUser = {
 };
 
 /**
- * Set active prescription
+ * Create user
  * @param {number} payload - Id prescription
  */
 export function* createUser({payload}: ActionCreatorType<number>): SagaIterator {
@@ -30,7 +30,7 @@ export function* createUser({payload}: ActionCreatorType<number>): SagaIterator 
 }
 
 /**
- * Begin of wizard saga
+ * Begin users saga
  */
 export default function* UserSaga(): SagaIterator {
     yield takeEvery(startCreateUserSaga, createUser);
