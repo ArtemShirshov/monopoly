@@ -3,6 +3,8 @@ import React, {PureComponent, type Node, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {Link} from '@reach/router';
 
+import type {ApplicationStoreType} from 'constants/flow/flowTypes';
+
 import {PlacePurchaseConnected} from 'components/placePurchase/placePurchase';
 import {PlayerListConnected} from 'components/playerList/playerList';
 import {SharesConnected} from 'components/shares/shares';

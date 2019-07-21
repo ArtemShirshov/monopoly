@@ -3,6 +3,8 @@ import React, {PureComponent, type Node, Fragment} from 'react';
 import {connect} from 'react-redux';
 import {Link} from '@reach/router';
 
+import type {ApplicationStoreType} from 'constants/flow/flowTypes';
+
 import {Button, Label} from 'components/@UI';
 import {startCreateUserSaga} from 'reducers/players';
 
@@ -47,6 +49,7 @@ export class CreateUser extends PureComponent<PropsType> {
      */
     render(): Node {
         const {name, label, error} = this.state;
+        const {players} = this.props;
 
         return (
             <Fragment>
@@ -61,16 +64,25 @@ export class CreateUser extends PureComponent<PropsType> {
                         <Link to="/simple-play">Пошли играть!</Link>
                     </Fragment>
                 )}
+
+                {players.map(player => (
+                    <div key={player.id}>
+                        {player.id}. {player.name}
+                    </div>
+                ))}
             </Fragment>
         );
     }
 }
 
+export const mapStateToProps = (state: ApplicationStoreType) => ({
+    players: state.players,
+});
 export const mapDispatchToProps = {
     startCreateUserSaga,
 };
 
 export const CreateUserConnected = connect(
-    null,
+    mapStateToProps,
     mapDispatchToProps,
 )(CreateUser);

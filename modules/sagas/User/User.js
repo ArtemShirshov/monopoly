@@ -26,7 +26,13 @@ const defaultFieldsUser = {
 export function* createUser({payload}: ActionCreatorType<number>): SagaIterator {
     const players = yield select(getPlayers);
 
-    yield put(addUser({...defaultFieldsUser, id: players.length, name: payload}));
+    yield put(
+        addUser({
+            ...defaultFieldsUser,
+            id: players.length + 1,
+            name: payload,
+        }),
+    );
 }
 
 /**
