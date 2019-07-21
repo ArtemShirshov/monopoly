@@ -3,9 +3,9 @@ import React, {Fragment, PureComponent, type Node} from 'react';
 import {connect} from 'react-redux';
 import {Router, Match} from '@reach/router';
 
-import {StaticRoutes} from 'constants/routes/routes';
 import type {VoidFunctionType} from 'constants/flow/flowTypes';
 
+import {StaticRoutes} from 'constants/routes/routes';
 import {Header} from 'components/header/header';
 import {NotificationConnected} from 'components/notification/notification';
 import {setPage, type PageType} from 'reducers/route/index';

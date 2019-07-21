@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow, configure} from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import {connect} from 'react-redux';
-
 import {setCmsPopupVisibility} from 'reducers/cms/cmsPopup/index';
 
 import {Home, mapDispatchToProps, mapStateToProps} from './home';

@@ -8,4 +8,4 @@ export type CardType = {
     rentPrice: number,
     taxPrice: number,
     expansionPrice: number,
-}
+};

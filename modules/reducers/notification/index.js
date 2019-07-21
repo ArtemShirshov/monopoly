@@ -1,1 +1,1 @@
-export {setNotification,defaultState, notification, clearNotification} from './notification'
+export {setNotification, defaultState, notification, clearNotification} from './notification';

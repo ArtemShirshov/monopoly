@@ -6,8 +6,6 @@ import classNames from 'classnames';
 import {circularTax, circularIncome} from 'components/playerList/utils/calculatorOperation';
 import {Title} from 'components/title/title';
 
-// import type {VoidFunctionType, ApplicationStoreType} from 'constants/flow/flowTypes';
-
 import s from './cardList.scss';
 
 type PropsType = {};

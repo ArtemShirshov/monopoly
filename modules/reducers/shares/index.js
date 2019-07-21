@@ -1,1 +1,1 @@
-export {shares, setShares} from './shares'
+export {shares, setShares} from './shares';

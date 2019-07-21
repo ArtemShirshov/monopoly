@@ -21,8 +21,10 @@ export const {setNotification, clearNotification} = createActions({
  */
 export const notification = handleActions(
     {
-        [setNotification]: (state: PageType, {payload}: ActionType<typeof setPlayer>): PageType =>
-            ({...state, text: payload, isShow: true}),
+        [setNotification]: (
+            state: PageType,
+            {payload}: ActionType<typeof setPlayer>,
+        ): PageType => ({...state, text: payload, isShow: true}),
         [clearNotification]: (
             state: PageType,
             {payload}: ActionType<typeof setPurchaseShares>,

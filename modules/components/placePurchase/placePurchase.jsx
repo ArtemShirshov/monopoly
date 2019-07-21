@@ -9,7 +9,7 @@ import {Title} from 'components/title/title';
 
 // import type {VoidFunctionType, ApplicationStoreType} from 'constants/flow/flowTypes';
 
-import s from './placePurchase.scss'
+import s from './placePurchase.scss';
 
 type PropsType = {};
 
@@ -94,7 +94,9 @@ export class PlacePurchase extends PureComponent<PropsType> {
                         placeholder="Карты"
                     />
                 </div>
-                <button className={s.btn} onClick={this.purchase}>Купить</button>
+                <button className={s.btn} onClick={this.purchase}>
+                    Купить
+                </button>
             </Fragment>
         );
     }

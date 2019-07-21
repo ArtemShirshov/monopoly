@@ -1,8 +1,8 @@
 // @flow
 import type {SagaIterator} from 'redux-saga';
-
 import {put, call} from 'redux-saga/effects';
 import {delay} from 'redux-saga';
+
 import {setNotification, clearNotification} from 'reducers/notification';
 
 /**

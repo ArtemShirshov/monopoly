@@ -18,7 +18,7 @@ export const getCards = (state: ApplicationStoreType): string => state.cards;
 export const getFreeCards = createSelector(
     getCards,
     (cards: WizardUsageType): boolean => {
-        let freeCard = [];
+        const freeCard = [];
 
         cards.forEach(card => {
             if (!card.sold) freeCard.push(card);

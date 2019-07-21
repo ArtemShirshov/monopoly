@@ -5,7 +5,7 @@
  * @return {WizardUsageType} - Active usage glasses
  */
 export const setCard = (cards: WizardUsageType, place: string): WizardUsageType => {
-    let freeCard = [];
+    const freeCard = [];
 
     cards.forEach(card => {
         if (card.place === place) {
@@ -19,7 +19,7 @@ export const setCard = (cards: WizardUsageType, place: string): WizardUsageType 
 };
 
 export const setCardPlayer = (players, currentPlayerId, selectedCard) => {
-    let result = [];
+    const result = [];
 
     players.forEach(player => {
         if (player.id === currentPlayerId) {
@@ -32,7 +32,7 @@ export const setCardPlayer = (players, currentPlayerId, selectedCard) => {
 };
 
 export const setSharesPlayer = (players, currentPlayerId, sharesNumber) => {
-    let result = [];
+    const result = [];
 
     players.forEach(player => {
         if (player.id === currentPlayerId) {

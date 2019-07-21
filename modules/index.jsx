@@ -15,5 +15,4 @@ require('custom-event-polyfill');
 
 focusWithin(document);
 
-
 ReactDOM.render(<Router />, document.getElementById('react-root'));

@@ -1,8 +1,8 @@
 // @flow
 import type {SagaIterator} from 'redux-saga';
-
 import {put, select, takeEvery, call} from 'redux-saga/effects';
 import {delay} from 'redux-saga';
+
 import {startPurchaseSaga, setStatusCard} from 'reducers/cards';
 import {setPlayer, setPurchaseShares, startPurchaseSharesSaga} from 'reducers/players';
 import {getCards} from 'selectors/cards/cards';

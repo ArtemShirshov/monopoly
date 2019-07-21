@@ -2,7 +2,7 @@
 import React, {type Node} from 'react';
 import {Link} from '@reach/router';
 
-import s from './header.scss'
+import s from './header.scss';
 
 /**
  * Brands gallery component
@@ -10,6 +10,8 @@ import s from './header.scss'
  */
 export const Header = (): Node => (
     <div className={s.header}>
-        <Link to='/' className={s.logo}>Монополия</Link>
+        <Link to="/" className={s.logo}>
+            Монополия
+        </Link>
     </div>
 );
