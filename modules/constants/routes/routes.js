@@ -1,6 +1,7 @@
 import {HomeConnected} from 'containers/home/home';
-import {SimplePlay} from 'containers/simplePlay/simplePlay';
+import {SimplePlayConnected} from 'containers/simplePlay/simplePlay';
 import {Card} from 'containers/card/card';
+import {CreateUserConnected} from 'containers/createUser/createUser';
 
 export const StaticRoutes = [
     {
@@ -11,11 +12,16 @@ export const StaticRoutes = [
     {
         path: '/simple-play',
         page: 'simplePlay',
-        component: SimplePlay,
+        component: SimplePlayConnected,
     },
     {
         path: '/card',
         page: 'cardList',
         component: Card,
+    },
+    {
+        path: '/create-user',
+        page: 'createUser',
+        component: CreateUserConnected,
     },
 ];

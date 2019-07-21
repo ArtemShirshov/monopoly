@@ -1,0 +1,37 @@
+// @flow
+import type {SagaIterator} from 'redux-saga';
+import {put, select, takeEvery, call} from 'redux-saga/effects';
+
+import {startCreateUserSaga, addUser} from 'reducers/players';
+import {getPlayers} from 'selectors/players/players';
+
+const defaultFieldsUser = {
+    id: 1,
+    // TODO:
+    //  Временное решение с ролями пользователей.
+    //  Необходимо добавить выбор ролей.
+    role: [1, 2, 3, 4],
+    property: {
+        card: [],
+        centralCard: [],
+        shares: 0,
+        insurancePolicy: 0,
+    },
+};
+
+/**
+ * Set active prescription
+ * @param {number} payload - Id prescription
+ */
+export function* createUser({payload}: ActionCreatorType<number>): SagaIterator {
+    const players = yield select(getPlayers);
+    console.log(payload);
+    yield put(addUser({...defaultFieldsUser, id: players.length, name: payload}));
+}
+
+/**
+ * Begin of wizard saga
+ */
+export default function* UserSaga(): SagaIterator {
+    yield takeEvery(startCreateUserSaga, createUser);
+}

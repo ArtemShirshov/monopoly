@@ -1,5 +1,7 @@
 // @flow
 import React, {PureComponent, type Node, Fragment} from 'react';
+import {connect} from 'react-redux';
+import {Link} from '@reach/router';
 
 import {PlacePurchaseConnected} from 'components/placePurchase/placePurchase';
 import {PlayerListConnected} from 'components/playerList/playerList';
@@ -19,12 +21,26 @@ export class SimplePlay extends PureComponent<> {
      * @returns {Node} Rendered react component
      */
     render(): Node {
+        const {players} = this.props;
+
         return (
             <div className={s.wrap}>
-                <PlayerListConnected />
-                <PlacePurchaseConnected />
-                <SharesConnected />
+                {players.length > 0 ? (
+                    <Fragment>
+                        <PlayerListConnected />
+                        <PlacePurchaseConnected />
+                        <SharesConnected />
+                    </Fragment>
+                ) : (
+                    <Link to="/create-user">Создайте игроков</Link>
+                )}
             </div>
         );
     }
 }
+
+export const mapStateToProps = (state: ApplicationStoreType) => ({
+    players: state.players,
+});
+
+export const SimplePlayConnected = connect(mapStateToProps)(SimplePlay);
