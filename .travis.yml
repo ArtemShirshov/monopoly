@@ -7,8 +7,6 @@ cache:
 script:
   - yarn build
 deploy:
-  provider: surge
-  skip_cleanup: true
-  project: ./src/
+  project: ./
 on:
   branch: master
