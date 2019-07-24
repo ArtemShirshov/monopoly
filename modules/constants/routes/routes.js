@@ -5,22 +5,22 @@ import {CreateUserConnected} from 'containers/createUser/createUser';
 
 export const StaticRoutes = [
     {
-        path: '/',
+        path: '/monopoly/',
         page: 'home',
         component: HomeConnected,
     },
     {
-        path: '/simple-play',
+        path: '/monopoly/simple-play',
         page: 'simplePlay',
         component: SimplePlayConnected,
     },
     {
-        path: '/card',
+        path: '/monopoly/card',
         page: 'cardList',
         component: Card,
     },
     {
-        path: '/create-user',
+        path: '/monopoly/create-user',
         page: 'createUser',
         component: CreateUserConnected,
     },
