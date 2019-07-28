@@ -29,7 +29,7 @@ export class CardList extends PureComponent<PropsType> {
 
                 <div className={s.wrapCards}>
                     {cards.map(card => (
-                        <div className={s.cardItem}>
+                        <div className={s.cardItem} key={card.name}>
                             <div className={s.cardWrap}>
                                 <div className={classNames(s.cardHeader, s[card.color])}>
                                     <div>{card.level}</div>

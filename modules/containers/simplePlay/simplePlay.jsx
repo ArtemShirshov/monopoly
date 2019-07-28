@@ -6,7 +6,7 @@ import {Link} from '@reach/router';
 import type {ApplicationStoreType} from 'constants/flow/flowTypes';
 import {PlacePurchaseConnected} from 'components/placePurchase/placePurchase';
 import {PlayerListConnected} from 'components/playerList/playerList';
-import {SharesConnected} from 'components/shares/shares';
+import {Shares} from 'components/shares/shares';
 
 import s from './simplePlay.scss';
 
@@ -30,7 +30,7 @@ export class SimplePlay extends PureComponent<> {
                     <Fragment>
                         <PlayerListConnected />
                         <PlacePurchaseConnected />
-                        <SharesConnected />
+                        <Shares />
                     </Fragment>
                 ) : (
                     <Link to="/create-user">Создайте игроков</Link>

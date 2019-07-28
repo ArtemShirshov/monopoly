@@ -5,6 +5,7 @@ import s from './Button.scss';
 
 /**
  * UI button component
+ * @example <Button onClick={this.createUser} disable={error}>Создать</Button>
  * @returns {Node} - rendered Brands gallery component
  */
 export const Button = ({children, onClick, disable}): Node => (

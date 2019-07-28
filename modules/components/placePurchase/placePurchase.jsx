@@ -5,7 +5,7 @@ import Select from 'react-select';
 
 import {startPurchaseSaga} from 'reducers/cards';
 import {getFreeCards} from 'selectors/cards/cards';
-import {Title} from 'components/@UI';
+import {Button, Title} from 'components/@UI';
 import type {ApplicationStoreType} from 'constants/flow/flowTypes';
 
 import s from './placePurchase.scss';
@@ -18,6 +18,12 @@ type PropsType = {};
  * @return {Node} - Element
  */
 export class PlacePurchase extends PureComponent<PropsType> {
+    constructor(props) {
+        super(props);
+        this.userSelect = React.createRef();
+        this.cardSelect = React.createRef();
+    }
+
     state = {
         selectedPlayer: null,
         selectedCard: null,
@@ -29,6 +35,7 @@ export class PlacePurchase extends PureComponent<PropsType> {
      */
     handleChangePlayer = selectedPlayer => {
         this.setState({selectedPlayer});
+        this.cardSelect.current.focus()
     };
 
     /**
@@ -78,24 +85,27 @@ export class PlacePurchase extends PureComponent<PropsType> {
                 <Title>Покупка имущества</Title>
 
                 <div className={s.wrapSelect}>
-                    <Select
-                        value={selectedPlayer}
-                        onChange={this.handleChangePlayer}
-                        options={optionsUsers}
-                        placeholder="Игрок"
-                    />
+                    <div className={s.select}>
+                        <Select
+                            value={selectedPlayer}
+                            onChange={this.handleChangePlayer}
+                            options={optionsUsers}
+                            placeholder="Игрок"
+                        />
+                    </div>
+
+                    <div className={s.select}>
+                        <Select
+                            value={selectedCard}
+                            onChange={this.handleChangeCard}
+                            options={optionsCard}
+                            placeholder="Карты"
+                            ref={this.cardSelect}
+                        />
+                    </div>
                 </div>
-                <div className={s.wrapSelect}>
-                    <Select
-                        value={selectedCard}
-                        onChange={this.handleChangeCard}
-                        options={optionsCard}
-                        placeholder="Карты"
-                    />
-                </div>
-                <button className={s.btn} onClick={this.purchase}>
-                    Купить
-                </button>
+
+                <Button onClick={this.purchase}>Купить</Button>
             </Fragment>
         );
     }

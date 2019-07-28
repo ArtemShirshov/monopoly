@@ -3,7 +3,30 @@ import {createActions, handleActions, type ActionType} from 'redux-actions';
 
 // import type {PageType, RouteType} from './routeType';
 
-export const defaultState = [];
+export const defaultState = [
+    {
+        id: 1,
+        name: 'Артем',
+        role: [1, 2],
+        property: {
+            card: [],
+            centralCard: [],
+            shares: 0,
+            insurancePolicy: 0,
+        },
+    },
+    {
+        id: 2,
+        name: 'Настя',
+        role: [3, 4],
+        property: {
+            card: [],
+            centralCard: [],
+            shares: 0,
+            insurancePolicy: 0,
+        },
+    },
+];
 
 export const {
     setPlayer,

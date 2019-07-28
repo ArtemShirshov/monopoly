@@ -224,18 +224,18 @@ export const card = [
 export const centralCard = [
     {
         name: 'Самолет',
-        price: '500',
+        price: 500,
     },
     {
         name: 'Яхта',
-        price: '500',
+        price: 500,
     },
     {
         name: 'Поезд',
-        price: '500',
+        price: 500,
     },
     {
         name: 'Автомобиль',
-        price: '500',
+        price: 500,
     },
 ];
