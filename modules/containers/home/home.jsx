@@ -1,9 +1,8 @@
 // @flow
-import React, {PureComponent, type Node, Fragment} from 'react';
-import {connect} from 'react-redux';
+import React, {PureComponent, type Node} from 'react';
 import {Link} from '@reach/router';
 
-// import type {VoidFunctionType, ApplicationStoreType} from 'constants/flow/flowTypes';
+import s from './home.scss';
 
 type PropsType = {};
 
@@ -19,26 +18,11 @@ export class Home extends PureComponent<PropsType> {
      */
     render(): Node {
         return (
-            <Fragment>
-                <div>Игроки</div>
+            <div className={s.wrapper}>
                 <Link to="/create-user">Создать</Link>
                 <Link to="/simple-play">Упрощенный режим</Link>
                 <Link to="/card">Список карт</Link>
-            </Fragment>
+            </div>
         );
     }
 }
-
-export const mapStateToProps = (store: ApplicationStoreType) => ({
-    // cmsPopup: store.cmsPopup,
-});
-
-export const mapDispatchToProps = {
-    // closePopup: () => setCmsPopupVisibility(false, null),
-    // getCustomer,
-};
-
-export const HomeConnected = connect(
-    mapStateToProps,
-    mapDispatchToProps,
-)(Home);

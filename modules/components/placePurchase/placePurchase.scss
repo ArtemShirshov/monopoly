@@ -1,13 +1,15 @@
 :local {
     .wrapSelect {
         padding-bottom: 15px;
+        display: flex;
     }
 
-    .btn {
-        background: #008ec9;
-        color: white;
-        border: none;
-        padding: 8px 15px;
-        border-radius: 3px;
+    .select {
+        margin-right: 10px;
+        width: 100%;
+
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
