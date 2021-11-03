@@ -135,7 +135,7 @@
     "rimraf": "^2.6.3",
     "store": "^2.0.12",
     "style-loader": "^0.23.1",
-    "validator": "^10.11.0"
+    "validator": "^13.7.0"
   },
   "jest": {
     "coverageThreshold": {
